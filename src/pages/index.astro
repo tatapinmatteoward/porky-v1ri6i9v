@@ -1,0 +1,356 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Home - Porky Pie Chronicles";
+const pageDescription = "Discover the rich history, mouthwatering recipes, and heartfelt stories behind Porky Pies. Dive into a world of savory traditions with our vintage-inspired collection.";
+
+const featuredPies = [
+  {
+    name: "Classic Porky Pie",
+    description: "The original recipe passed down through generations",
+    image: "placeholder-pie1.jpg"
+  },
+  {
+    name: "Spiced Porky Pie",
+    description: "A warming blend of traditional spices and savory meat",
+    image: "placeholder-pie2.jpg"
+  },
+  {
+    name: "Herb Crusted Porky Pie",
+    description: "Fresh herbs baked into a golden crust",
+    image: "placeholder-pie3.jpg"
+  }
+];
+
+const historyTimeline = [
+  {
+    year: "1847",
+    event: "First recorded Porky Pie recipe in rural Cornwall"
+  },
+  {
+    year: "1923",
+    event: "Porky Pie becomes a family tradition in the Smith household"
+  },
+  {
+    year: "1965",
+    event: "Traditional recipe passed to the next generation"
+  },
+  {
+    year: "2003",
+    event: "Porky Pie Chronicles founded with passion for preserving heritage"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-amber-50 to-amber-100 py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMCAwaDYwdjYwSDB6IiBmaWxsPSJub25lIi8+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9IiM4MzYzMDQiLz4KPGNpcmNsZSBjeD0iMzAiIGN5PSIxNSIgcj0iMSIgZmlsbD0iIzM0MGQwMiIvPgo8Y2lyY2xlIGN4PSI1MCIgY3k9IjMwIiByPSIxIiBmaWxsPSIjODM2MzA0Ii8+CjxjaXJjbGUgY3g9IjIwIiBjeT0iNDUiIHI9IjEiIGZpbGw9IiMzNDBkMDIiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI1MCIgcj0iMSIgZmlsbD0iIzgzNjMwNCIvPgo8L3N2Zz4=')]"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-serif font-bold text-amber-900 leading-tight mb-4">
+            Welcome to <span class="text-crimson-600">Porky Pie Chronicles</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-amber-800 font-serif italic mb-8">
+            Unveiling the Savory Stories and Traditions of Porky Pies
+          </p>
+          <div class="flex space-x-4">
+            <button class="bg-crimson-600 hover:bg-crimson-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+              Explore Recipes
+            </button>
+            <button class="border-2 border-crimson-600 text-crimson-600 hover:bg-crimson-50 font-bold py-3 px-6 rounded-lg transition duration-300">
+              Read History
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 bg-amber-200 rounded-full absolute -top-6 -left-6 z-0"></div>
+            <div class="w-64 h-64 md:w-80 md:h-80 bg-amber-300 rounded-full absolute -bottom-6 -right-6 z-0"></div>
+            <div class="relative z-10 bg-white border-8 border-amber-800 rounded-xl shadow-xl transform rotate-3">
+              <div class="bg-amber-100 border-b-4 border-amber-800 p-4">
+                <i class="fas fa-utensils text-3xl text-amber-700"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-amber-900 font-serif">Authentic Porky Pie</h3>
+                <p class="text-amber-700 mt-2">Handcrafted with love and traditional methods</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-amber-900 mb-4">The Story Behind the Pie</h2>
+        <div class="w-24 h-1 bg-crimson-600 mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <div class="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 shadow-inner">
+            <p class="text-lg text-amber-800 leading-relaxed mb-4">
+              Step into a world where flaky crusts meet timeless flavors. At Porky Pie Chronicles, we celebrate the humble yet legendary <span class="font-bold text-crimson-600">Porky Pie</span>—that iconic British delicacy born from generations of family kitchens and countryside hearths.
+            </p>
+            <p class="text-lg text-amber-800 leading-relaxed">
+              Our site blends vintage charm with modern twists, bringing you authentic recipes, captivating histories, and personal tales that make every bite a story.
+            </p>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2">
+          <div class="relative h-80 rounded-xl overflow-hidden shadow-xl border-4 border-amber-800">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
+            <div class="absolute bottom-0 left-0 right-0 z-20 p-6 text-white">
+              <h3 class="text-2xl font-serif font-bold">Rustic Heritage</h3>
+              <p class="mt-2">Traditional methods, modern presentation</p>
+            </div>
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Pies Section -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-amber-900 mb-4">Our Signature Pies</h2>
+        <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+          Discover our carefully crafted selection of traditional and innovative porky pies
+        </p>
+        <div class="w-24 h-1 bg-crimson-600 mx-auto mt-4"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {featuredPies.map((pie, index) => (
+          <div key={index} class="bg-white rounded-xl overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 border-2 border-amber-200">
+            <div class="h-48 bg-amber-200 relative">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">{pie.name}</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-amber-700">{pie.description}</p>
+              <button class="mt-4 text-crimson-600 font-medium hover:text-crimson-700 flex items-center">
+                Learn More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Porky Pies Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-amber-900 mb-4">Why Porky Pies?</h2>
+        <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+          These handheld wonders aren't just food—they're a piece of heritage
+        </p>
+        <div class="w-24 h-1 bg-crimson-600 mx-auto mt-4"></div>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="bg-gradient-to-r from-crimson-50 to-amber-50 border-l-4 border-crimson-600 p-6 rounded-r-lg shadow-md">
+            <h3 class="text-2xl font-serif font-bold text-amber-900 mb-4">A Culinary Legacy</h3>
+            <p class="text-amber-700 leading-relaxed mb-4">
+              Porky Pies represent the heart of British culinary tradition, connecting us to generations past through their simple yet profound flavors.
+            </p>
+            <p class="text-amber-700 leading-relaxed">
+              Each bite carries stories of family gatherings, country festivals, and the careful craftsmanship that transforms simple ingredients into extraordinary memories.
+            </p>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="bg-amber-100 p-4 rounded-lg border border-amber-200">
+              <div class="text-crimson-600 text-3xl mb-2"><i class="fas fa-seedling"></i></div>
+              <h4 class="font-bold text-amber-900">Authentic Ingredients</h4>
+              <p class="text-amber-700 text-sm mt-1">Sourced locally with care</p>
+            </div>
+            <div class="bg-amber-100 p-4 rounded-lg border border-amber-200">
+              <div class="text-crimson-600 text-3xl mb-2"><i class="fas fa-fire"></i></div>
+              <h4 class="font-bold text-amber-900">Traditional Methods</h4>
+              <p class="text-amber-700 text-sm mt-1">Time-honored techniques</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2">
+          <div class="bg-gradient-to-br from-amber-800 to-amber-900 rounded-xl p-8 text-white shadow-xl">
+            <h3 class="text-3xl font-serif font-bold mb-6">The Perfect Bite</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-crimson-300"><i class="fas fa-check-circle"></i></div>
+                <p class="text-lg">Flaky crust that gives way to juicy, seasoned pork</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-crimson-300"><i class="fas fa-check-circle"></i></div>
+                <p class="text-lg">Perfect balance of textures and flavors</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-crimson-300"><i class="fas fa-check-circle"></i></div>
+                <p class="text-lg">Portable comfort food for any occasion</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-crimson-300"><i class="fas fa-check-circle"></i></div>
+                <p class="text-lg">Versatile enough for lunch or dinner</p>
+              </li>
+            </ul>
+            
+            <div class="mt-8 pt-6 border-t border-amber-700">
+              <p class="italic text-amber-200">
+                "Imagine the crackle of pastry under your fingers, the juicy burst of seasoned pork, and the subtle spice that whispers of heritage and happiness."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-16 bg-amber-100">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-amber-900 mb-4">Our Heritage Journey</h2>
+        <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+          A timeline of the Porky Pie's evolution and enduring charm
+        </p>
+        <div class="w-24 h-1 bg-crimson-600 mx-auto mt-4"></div>
+      </div>
+      
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-crimson-400 hidden md:block"></div>
+        
+        <div class="space-y-12">
+          {historyTimeline.map((event, index) => (
+            <div key={index} class={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
+              <div class={`md:w-1/2 mb-6 md:mb-0 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+                <div class="inline-block bg-white p-4 rounded-full shadow-md border-2 border-crimson-600 mb-4">
+                  <span class="text-2xl font-bold text-crimson-600">{event.year}</span>
+                </div>
+                <h3 class="text-xl font-bold text-amber-900">{event.event}</h3>
+              </div>
+              <div class="md:w-1/2 flex justify-center">
+                <div class="w-12 h-12 bg-crimson-600 rounded-full flex items-center justify-center">
+                  <i class="fas fa-history text-white"></i>
+                </div>
+              </div>
+              <div class="md:w-1/2 hidden md:block"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-crimson-600 to-crimson-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Join Our Community</h2>
+      <p class="text-xl text-amber-100 max-w-2xl mx-auto mb-10">
+        Become part of the Porky Pie Chronicles family and share your own stories and recipes
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-white text-crimson-600 hover:bg-amber-50 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+          <i class="fas fa-clipboard-list mr-2"></i> Share Your Recipe
+        </button>
+        <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition duration-300">
+          <i class="fas fa-book mr-2"></i> Read Our Stories
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .text-amber-900 {
+    color: #4d371f;
+  }
+  
+  .text-amber-800 {
+    color: #6b4e2e;
+  }
+  
+  .text-amber-700 {
+    color: #8c6745;
+  }
+  
+  .text-crimson-600 {
+    color: #c0392b;
+  }
+  
+  .bg-crimson-600 {
+    background-color: #c0392b;
+  }
+  
+  .text-crimson-700 {
+    color: #a93124;
+  }
+  
+  .bg-crimson-50 {
+    background-color: #fdeae8;
+  }
+  
+  .border-crimson-600 {
+    border-color: #c0392b;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transform.rotate-3 {
+    transform: rotate(3deg);
+  }
+  
+  .transform.hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .transition.duration-500 {
+    transition-duration: 500ms;
+  }
+  
+  .border-8 {
+    border-width: 8px;
+  }
+  
+  .border-l-4 {
+    border-left-width: 4px;
+  }
+  
+  .rounded-xl {
+    border-radius: 0.75rem;
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+</style>
